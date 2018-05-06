@@ -1,0 +1,53 @@
+{"quiz":[
+  {
+    "question": "MATLAB là môi trường tính toán khoa học được xây dựng chú trọng vào:",
+    "answers": {
+      "A": "Giải tích số (xấp xỉ, gần đúng để tìm nghiệm số học)",
+      "B": "Tính toán hình thức (biến đổi biểu thức, rút gọn tương tự như Maple hay Mathematica)",
+      "C": "Lập trình ứng dụng tổng quát (như C#, Java...)",
+      "D": "Lập trình ứng dụng có giao diện (như .NET Framework, JavaFX, Swing...)"
+    },
+    "correct_answer": "A"
+  },
+  {
+  "question": "Ngoài MATLAB, hiện nay một công cụ tính toán khoa học rất được ưa chuộng là:",
+    "answers": {
+      "A": "NumPy",
+      "B": "Octave",
+      "C": "TensorFlow",
+      "D": "Keras"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question": "Simulink là công cụ dùng để: ",
+    "answers":{
+      "A": "Lập trình m-file",
+      "B": "Mô phỏng thiết lập hệ thống ở dạng sơ đồ",
+      "C": "Công cụ tạo giao diện đồ họa",
+      "D": "Liên kết MATLAB với Kernel tính toán"
+    },
+    "correct_answer": "B"
+  },
+  {
+  "question": "Vì sao trong một số trường hợp ta không thể dùng phương pháp giải tích để tính kết quả?",
+  "answers":{
+    "A": "Lâu",
+    "B": "Tính sai",
+    "C": "Không tính được",
+    "D": "Tất cả nguyên nhân trên"
+  },
+  "correct_answer": "D"
+  },
+  {
+    "question": "Vì sao người ta cần mô phỏng kỹ hệ thống (bằng Simulink) trước khi code thiệt trên MCU (Arduino, DragonBoard...)",
+    "answers":{
+      "A": "Tránh lỗi do sai thuật toán",
+      "B": "Giảm chi phí phần cứng",
+      "C": "Phân tích và dự đoán đáp ứng kì vọng trong trường hợp hệ thống thực tế khác với mô hình đã xây dựng",
+      "D": "Tất cả nguyên nhân trên"
+    },
+    "correct_answer": "D"
+  }
+  ]
+}
