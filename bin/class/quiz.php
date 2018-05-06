@@ -15,6 +15,7 @@ class Quiz
     private $quiz_file_binary;
     private $quiz;
     private $points = 0;
+    private $wrong_answer;
 
     public function __construct($quiz_file)
     {
@@ -40,6 +41,8 @@ class Quiz
                 if(strtolower(trim($user_answer))==strtolower(trim($correct_answer)))
                 {
                     $points+=5;
+                } else {
+                    $this->wrong_answer.="Q".$q.", ";
                 }
             }
             $q++;
@@ -51,6 +54,13 @@ class Quiz
     {
         $lectures = new Lectures();
         Progress::registerProgress($ident,$lec_id,$this->points);
+    }
+    public function saveWrongAnswer($ident,$lec_id)
+    {
+        global $db;
+        $wrong_answer = $this->wrong_answer;
+        if(!Progress::isProgress($ident,$lec_id))
+            $db->query("INSERT INTO wrong_answers (id, ident, screen, wrong_answers) VALUES ('','$ident','$lec_id','$wrong_answer')");
     }
     public function writeQuiz()
     {

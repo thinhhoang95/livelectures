@@ -14,7 +14,9 @@ $lecture = $lectures->getLecture($lec_id);
 
 $quiz = new Quiz("../lecture/".$lecture->metaurl);
 $points = $quiz->gradeQuiz($_POST);
+$quiz->saveWrongAnswer($_POST["ident"],$_POST["lec_id"]);
 $quiz->saveProgress($_POST["ident"],$_POST["lec_id"]);
+
 
 echo "Successfully graded your submission! You have ".$points." points, which corresponds to ".($points/5)." correct answers! Note that if you have already submitted your quiz, no more points will be gained.";
 ?>

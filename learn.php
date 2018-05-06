@@ -31,7 +31,7 @@ $lectures = new Lectures();
         </div>
         <div class="col-auto d-flex flex-row align-items-center">
             <span style="margin-right: 12px">@<?php echo $_COOKIE["ident"]?> / <?php echo $my_points?> points</span>
-            <button type="button" class="btn btn-secondary">Latest content</button>
+            <button type="button" class="btn btn-secondary" id="latest_content_btn">Latest content</button>
         </div>
     </div>
     <div class="row">
@@ -96,6 +96,9 @@ $lectures = new Lectures();
             alert(data);
             location.reload(true);
         });
+    });
+    $("#latest_content_btn").on("click",function(){
+        window.location = 'learn.php';
     });
 </script>
 </body>

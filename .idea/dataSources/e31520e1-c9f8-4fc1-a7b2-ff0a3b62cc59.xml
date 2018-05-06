@@ -989,99 +989,136 @@
     <table id="250" parent="8" name="progress"/>
     <table id="251" parent="8" name="settings"/>
     <table id="252" parent="8" name="users"/>
-    <column id="253" parent="249" name="id">
+    <table id="253" parent="8" name="wrong_answers"/>
+    <column id="254" parent="249" name="id">
       <Position>1</Position>
       <DataType>mediumint(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="249" name="metaurl">
+    <column id="255" parent="249" name="metaurl">
       <Position>2</Position>
       <DataType>tinytext|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="249" name="type">
+    <column id="256" parent="249" name="type">
       <Position>3</Position>
       <DataType>tinytext|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="256" parent="249" name="PRIMARY">
+    <column id="257" parent="249" name="title">
+      <Position>4</Position>
+      <DataType>tinytext|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="258" parent="249" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="257" parent="250" name="id">
+    <column id="259" parent="250" name="id">
       <Position>1</Position>
       <DataType>mediumint(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="250" name="user_id">
+    <column id="260" parent="250" name="user_id">
       <Position>2</Position>
       <DataType>mediumint(9)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="250" name="lecture_id">
+    <column id="261" parent="250" name="lecture_id">
       <Position>3</Position>
       <DataType>mediumint(9)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="250" name="points">
+    <column id="262" parent="250" name="points">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="261" parent="250" name="user_id">
+    <index id="263" parent="250" name="user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="262" parent="250" name="lecture_id">
+    <index id="264" parent="250" name="lecture_id">
       <ColNames>lecture_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="263" parent="250" name="PRIMARY">
+    <key id="265" parent="250" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="264" parent="251" name="k">
+    <column id="266" parent="251" name="k">
       <Position>1</Position>
       <DataType>varchar(96)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="251" name="v">
+    <column id="267" parent="251" name="v">
       <Position>2</Position>
       <DataType>tinytext|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="266" parent="251" name="PRIMARY">
+    <key id="268" parent="251" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>k</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="267" parent="252" name="id">
+    <column id="269" parent="252" name="id">
       <Position>1</Position>
       <DataType>mediumint(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="268" parent="252" name="username">
+    <column id="270" parent="252" name="username">
       <Position>2</Position>
       <DataType>tinytext|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="269" parent="252" name="PRIMARY">
+    <key id="271" parent="252" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="272" parent="253" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="273" parent="253" name="ident">
+      <Position>2</Position>
+      <DataType>tinytext|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="274" parent="253" name="screen">
+      <Position>3</Position>
+      <DataType>mediumint(9)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="275" parent="253" name="wrong_answers">
+      <Position>4</Position>
+      <DataType>mediumtext|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="276" parent="253" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
